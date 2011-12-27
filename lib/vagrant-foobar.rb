@@ -1,7 +1,7 @@
 module Vagrant
   module Command
-    class FoobarCommand < NamedBase
-      register "foobar", "Run a number of predefined tests"
+    class KickCommand < NamedBase
+      register "kick", "Run a number of predefined tests"
 
       def execute
         target_vms.each do |vm|

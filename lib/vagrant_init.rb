@@ -1,6 +1,6 @@
 begin
-  require 'vagrant-foobar'
+  require 'vagrant-kick'
 rescue LoadError
   require 'rubygems'
-  require 'vagrant-foobar'
+  require 'vagrant-kick'
 end

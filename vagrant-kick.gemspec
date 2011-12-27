@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "vagrant-foobar"
+  s.name = "vagrant-kick"
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -24,13 +24,13 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "lib/vagrant-foobar.rb",
+    "lib/vagrant-kick.rb",
     "lib/vagrant_init.rb",
     "test/helper.rb",
-    "test/test_vagrant-foobar.rb",
-    "vagrant-foobar.gemspec"
+    "test/test_vagrant-kick.rb",
+    "vagrant-kick.gemspec"
   ]
-  s.homepage = "http://github.com/arioch/vagrant-foobar"
+  s.homepage = "http://github.com/arioch/vagrant-kick"
   s.licenses = ["GPL2"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.13"
