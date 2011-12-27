@@ -21,13 +21,16 @@
     [node01] REMOTE
     [node01] uptime
     [node01] 23:47:27 up  2:36,  0 users,  load average: 0.00, 0.00, 0.00
-    [node01] 
+    
+    
     [node01] facter puppetversion
     [node01] 2.6.6
-    [node01] 
+    
+    
     [node01] facter facterversion
     [node01] 1.6.0
-
+    
+    
     [node01] LOCAL
     [node01] check_http -H 192.168.1.10 -p 80
     CRITICAL - Socket timeout after 10 seconds
