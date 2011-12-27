@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "vagrant-foobar"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom De Vylder"]
@@ -27,7 +27,8 @@ Gem::Specification.new do |s|
     "lib/vagrant-foobar.rb",
     "lib/vagrant_init.rb",
     "test/helper.rb",
-    "test/test_vagrant-foobar.rb"
+    "test/test_vagrant-foobar.rb",
+    "vagrant-foobar.gemspec"
   ]
   s.homepage = "http://github.com/arioch/vagrant-foobar"
   s.licenses = ["GPL2"]
