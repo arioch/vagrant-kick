@@ -1,5 +1,3 @@
-require 'vagrant'
-
 module Vagrant
   module Command
     class FoobarCommand < NamedBase
@@ -12,11 +10,31 @@ module Vagrant
               raise Errors::VMInaccessible
             elsif vm.vm.running?
               puts
-              puts vm.name
-              Dir.glob("tests/#{vm.name}.*") do |file|
-                puts
-                system "./#{file}"
+              # refactor in progress
+              puts "[#{vm.name}] REMOTE"
+              File.open("tests/#{vm.name}.ssh", "r").each do |infile|
+                commands = infile
+
+                vm.ssh.execute do |ssh|
+                  ssh.sudo!(commands) do |channel, type, data|
+                    ssh.check_exit_status(data, commands) if type == :exit_status
+                    #vm.env.ui.info("REMOTE") if type != :exit_status
+                    vm.env.ui.info(infile) if type != :exit_status
+                    vm.env.ui.info(data) if type != :exit_status
+                    vm.env.ui.info("") if type != :exit_status
+                  end
+                end
               end
+              
+              puts
+              system "./tests/#{vm.name}.local"
+              
+              puts "[#{vm.name}] LOCAL"
+              File.open("tests/#{vm.name}.local", "r").each do |infile|
+                puts "[#{vm.name}] #{infile}"
+                system "#{infile}"
+              end
+
             else
               vm.env.ui.info I18n.t("vagrant.commands.common.vm_not_running")
             end
@@ -28,3 +46,6 @@ module Vagrant
     end
   end
 end
+
+# TODO:
+# - catch exit status for each test
