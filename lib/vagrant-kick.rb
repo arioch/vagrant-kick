@@ -17,11 +17,11 @@ module Vagrant
 
                 vm.ssh.execute do |ssh|
                   ssh.sudo!(commands) do |channel, type, data|
+                    puts
                     ssh.check_exit_status(data, commands) if type == :exit_status
-                    #vm.env.ui.info("REMOTE") if type != :exit_status
                     vm.env.ui.info(infile) if type != :exit_status
                     vm.env.ui.info(data) if type != :exit_status
-                    vm.env.ui.info("") if type != :exit_status
+                    #vm.env.ui.info("") if type != :exit_status
                   end
                 end
               end
