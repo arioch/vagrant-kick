@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom De Vylder"]
   s.date = "2011-12-27"
-  s.description = "longer description of your gem"
+  s.description = "Small plugin to fire a bunch of tests against your vm's"
   s.email = "tom@penumbra.be"
   s.extra_rdoc_files = [
     "LICENSE.txt",
