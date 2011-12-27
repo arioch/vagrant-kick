@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "vagrant-foobar"
-  gem.homepage = "http://github.com/arioch/vagrant-foobar"
+  gem.name = "vagrant-kick"
+  gem.homepage = "https://github.com/arioch/vagrant-kick"
   gem.license = "GPL2"
-  gem.summary = %Q{one-line summary of your gem}
-  gem.description = %Q{longer description of your gem}
+  gem.summary = %Q{Vagrant plugin to kick off tests}
+  gem.description = %Q{Vagrant plugin to kick off a bunch of predefined tests}
   gem.email = "tom@penumbra.be"
   gem.authors = ["Tom De Vylder"]
   # dependencies defined in Gemfile

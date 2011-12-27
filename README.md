@@ -34,3 +34,13 @@ would return the same output as...
     facter puppetversion
     facter facterversion
 
+
+### Installation
+    $ rake install
+    $ ls pkg/
+    vagrant-kick-0.0.1.gem
+    $ sudo gem install pkg/vagrant-kick-0.0.1.gem
+
+or
+
+    $ sudo rake install
