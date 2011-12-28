@@ -53,13 +53,13 @@ would return the same output as...
     $ ssh 192.168.1.10 "uptime"
 
 
-### Installation
+### Installation using rubygems
+
+    $ sudo gem install vagrant-kick
+
+### Installation using source
     $ rake install
     $ ls pkg/
     vagrant-kick-0.0.1.gem
     $ sudo gem install pkg/vagrant-kick-0.0.1.gem
-
-or
-
-    $ sudo rake install
 
